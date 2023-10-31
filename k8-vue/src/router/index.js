@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import EditorView from '../views/EditorView.vue'
 
 
 const router = createRouter({
@@ -19,12 +20,28 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
     {
-      path: '/editor',
+      path: '/editor/:id',
       name: 'editor',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/EditorView.vue')
+      component: EditorView
+    },
+    {
+      path: '/board',
+      name: 'board',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/BoardsView.vue')
+    },
+    {
+      path: '/login',
+      name: 'login',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/LoginView.vue')
     }
   ]
 })
