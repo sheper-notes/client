@@ -1,56 +1,33 @@
-<script setup>
-
+<script>
+export default {
+        methods: {
+            login() {
+                this.$auth0.loginWithRedirect({
+                });
+            },
+            signup() {
+                this.$auth0.loginWithRedirect({
+                    screen_hint: 'signup',
+                });
+            },
+        }
+    };
 </script>
 
 <template>
   <div>
     <header class="HomeNavBar">
       <img src="@/assets/logo.svg" alt="">
-      <a>Features</a>
-      <a>Use cases</a>
-      <a>Plans</a>
+
     </header>
     <div class="HomeBanner">
       <div class="TxtAndButtons">
         <h1 >Collaborate. Design.<br/>Present.</h1>
-        <a class="SignUpEmail" href="">Sign up using Email</a>
-        <a class="SignUpGoogle" href="">Sign up using Google</a>
+        <a class="SignUpEmail" @click="signup">Sign up</a>
+        <a class="SignUpGoogle" @click="login">Login</a>
       </div>
     </div>
-    <div class="HomeFeatures">
-      <h1>Features</h1>
-      <div class="HomeFeaturesBox">
-
-      </div>
-      <div class="HomeFeatureCard">
-        <img src="@/assets/test.jpg" alt="">
-        <div>
-          <h4>Present</h4>
-          <p>Easily pitch ideas or present using the presentation features</p>
-        </div>
-      </div>
-      <div class="HomeFeatureCard">
-        <img src="@/assets/test.jpg" alt="">
-        <div>
-          <h4>Collaborate</h4>
-          <p>Collaborate with a team in realtime</p>
-        </div>
-      </div>
-      <div class="HomeFeatureCard">
-        <img src="@/assets/test.jpg" alt="">
-        <div>
-          <h4>Design freely</h4>
-          <p>Design using the built in tool suite or obtain components from the marketplace</p>
-        </div>
-      </div>
-      <div class="HomeFeatureCard">
-        <img src="@/assets/test.jpg" alt="">
-        <div>
-          <h4>Program behaviour</h4>
-          <p>Program actions to use while creating or presenting</p>
-        </div>
-      </div>
-    </div>
+      
   </div>
 </template>
 
@@ -58,11 +35,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=swap');  
 .HomeNavBar{
     z-index: 2;
-    width: 100%;
-    height: 60px;
+    width: calc(100vw - 20px);
     position: fixed;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
     top: 0;
-    background-color: #fff;
+    background-color: #121212;
     box-shadow: 0px 1px 10px 2px rgba(0, 0, 0, 0.25);
   }
 
@@ -90,10 +69,10 @@
   .SignUpGoogle {
     padding: 10px;
     margin-left: 10px;
-    background-color: #fff;
+    background-color: #1E1F22;
     border-radius: 5px;
     text-decoration: none;
-    color: black;
+    color: #fff;
     font-family: Inter;
     font-size: 1rem;
     font-style: normal;
@@ -115,29 +94,5 @@
     line-height: normal;
   }
 
-  .HomeFeatures {
-    color: #000;
-    font-family: Inter;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  }
 
-  .HomeFeatureCard {
-    display: flex;
-    flex-direction: row;
-    width: 500px;
-    height: 150px;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0px 3px 12px 1px rgba(136, 136, 136, 0.25);
-    margin: 20px
-  }
-
-  .HomeFeatureCard > img {
-    height: 100%;
-    margin-right: 10px;
-    border-radius:  10px 0px 0px 10px; 
-  }
 </style>
