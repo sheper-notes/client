@@ -16,8 +16,10 @@ app.use(
     createAuth0({
         domain: "sheper.eu.auth0.com",
         clientId: "0E2mHwwOf4soisLRscKOHabEFVq4hZtZ",
+        
         authorizationParams: {
-          redirect_uri: window.location.origin
+          redirect_uri: window.location.origin,
+          audience: "https://sheper.eu.auth0.com/api/v2/"
         }
       })
 )

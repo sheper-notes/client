@@ -5,14 +5,13 @@
                 <a>Log out</a>
             </header>
         <div class="mainView">
-
             <template v-for="item in boards">
                 <div class="BoardItem">
                     <p> {{item.name}}</p>
-                    <span>Role: Role</span>
+                    <span>Role: {{item.role}}</span>
                     <div>
-                        <a class="Open">Open</a>
-                        <a class="Settings">Settings</a>
+                        <a class="Open" v-bind:href="'/editor/' + item.id">Open</a>
+                        <a class="Settings" v-bind:href="'/settings/' + item.id">Settings</a>
                     </div>
                 </div>
             </template>
@@ -31,17 +30,6 @@ export default {
     //const boards = await fetch("https://localhost:7236/api/Board")
     //const data = await boards.json()
     //this.boards = data
-    this.boards = [
-        {id: "1", name: "Test board"},
-        {id: "1", name: "Test board"},
-        {id: "1", name: "Test board"},
-        {id: "1", name: "Test board"},
-        {id: "1", name: "Test board"},
-        {id: "1", name: "Test board"},
-        {id: "1", name: "Test board"},
-
-    ]
-    console.log(this.boards)
   },
   methods: {
     
@@ -69,6 +57,8 @@ export default {
         flex: none;
         margin: 16px;
         border-radius: 10px;
+        display: flex;
+        flex-direction: column;
         background-color: #121212;
     }
 
@@ -84,6 +74,7 @@ export default {
         font-size: 0.8rem;
         font-style: normal;
         font-weight: 400;
+        text-decoration: none;
     }
 
     .BoardItem > div > .Settings {
@@ -98,6 +89,7 @@ export default {
         font-size: 0.8rem;
         font-style: normal;
         font-weight: 400;
+        text-decoration: none;
     }
 
     .BoardItem > div {
@@ -111,7 +103,20 @@ export default {
         font-size: 1.1rem;
         font-style: normal;
         font-weight: 400;
+        padding-left: 10px;
+        margin-bottom: 2px;
     }
+
+    .BoardItem > span {
+        color: #fff;
+        font-family: Inter;
+        font-size: 0.8rem;
+        font-style: normal;
+        font-weight: 400;
+        padding-left: 10px;
+        padding-bottom: 5px;
+    }
+
 
     .HomeNavBar > a {
         height: 43px;

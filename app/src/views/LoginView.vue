@@ -21,6 +21,7 @@
                 this.$auth0.logout({ logoutParams: { returnTo: window.location.origin } });
             },
             async showToken() {
+                console.log(this.$auth0.getAccessTokenSilently())
                 //const otlk = await this.$auth0
                 console.log(this.$auth0)
             }

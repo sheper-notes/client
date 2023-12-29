@@ -19,6 +19,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.3.1",
     "autoprefixer": "^10.4.15",
+    "cypress": "^13.6.2",
     "vite": "^4.4.9"
   }
 }

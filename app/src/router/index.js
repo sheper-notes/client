@@ -28,6 +28,14 @@ const router = createRouter({
       component: EditorView
     },
     {
+      path: '/settings/:id',
+      name: 'settings',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/SettingsView.vue')
+    },
+    {
       path: '/board',
       name: 'board',
       // route level code-splitting
