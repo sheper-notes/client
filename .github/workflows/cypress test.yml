@@ -19,4 +19,5 @@ jobs:
           working-directory: ./app
           build: npm run build
           start: npm run dev
+          component: true
           browser: chrome
