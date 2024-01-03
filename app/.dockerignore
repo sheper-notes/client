@@ -11,4 +11,4 @@ LICENSE
 README.md
 .env
 cypress
-cypress-config.js
+cypress.config.js
