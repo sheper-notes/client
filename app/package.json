@@ -13,7 +13,9 @@
     "@dreamonkey/vue-signalr": "^1.1.0",
     "@latelier/vue-signalr": "^2.0.4",
     "babel-runtime": "^6.26.0",
+    "konva": "^9.3.0",
     "vue": "^3.3.4",
+    "vue-konva": "^3.0.2",
     "vue-router": "^4.2.4"
   },
   "devDependencies": {
