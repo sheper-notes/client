@@ -1,0 +1,19 @@
+name: Deploy to AKS Cluster
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    # Set the target AKS cluster.
+    - uses: Azure/aks-set-context@v1
+      with:
+        creds: '${{ secrets.AZURE_CREDENTIALS }}'
+        cluster-name: sheper
+        resource-group: sheper
+        
+    - name: Deploy
+      run: kubectl get pods
