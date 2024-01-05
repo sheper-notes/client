@@ -23,9 +23,13 @@ export default {
     <div class="HomeBanner">
       <div class="TxtAndButtons">
         <h1 >Collaborate. Design.<br/>Present.</h1>
-        <a class="SignUpEmail" @click="signup">Sign up</a>
-        <a class="SignUpGoogle" @click="login">Login</a>
+        <div style="margin-bottom: 20px;">
+          <a class="SignUpEmail" @click="signup">Sign up</a>
+          <a class="SignUpGoogle" @click="login">Login</a><br/>
+        </div>
+        <a href="gdpr" class="GDPR">See how we comply with GDPR</a>
       </div>
+
     </div>
       
   </div>
@@ -69,7 +73,22 @@ export default {
   .SignUpGoogle {
     padding: 10px;
     margin-left: 10px;
+    margin-bottom: 20px;
     background-color: #1E1F22;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .GDPR {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #d2009a;
     border-radius: 5px;
     text-decoration: none;
     color: #fff;
