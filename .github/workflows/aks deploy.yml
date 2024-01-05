@@ -15,5 +15,5 @@ jobs:
         cluster-name: sheper
         resource-group: sheper
         
-    - name: Deploy
-      run: kubectl get pods
+    - name: Restart client
+      run: kubectl rollout restart deployment client
