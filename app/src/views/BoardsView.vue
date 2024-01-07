@@ -63,7 +63,7 @@ export default {
     }
 
     .BoardItem > div > .Open {
-        background-color: #EF36FF;
+        background-color: #d9ff00;
         width: 40%;
         border-radius: 6px;
         padding: 5px;
