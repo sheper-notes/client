@@ -53,7 +53,7 @@ export default {
     width: 100%;
     height: 85vh;
     border-radius: 0px 0px 50px 50px;
-    background: #EF36FF;
+    background: #1eff00;
   }
 
   .HomeBanner > .TxtAndButtons {
