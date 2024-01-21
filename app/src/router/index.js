@@ -58,6 +58,23 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/GdprPolicy.vue')
+    },
+    {
+      path: '/gdprpanel',
+      name: 'gdprpanel',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/gdprView.vue')
+    }
+    ,
+    {
+      path: '/export/:id',
+      name: 'export',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/exportView.vue')
     }
   ]
 })
